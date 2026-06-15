@@ -1,0 +1,32 @@
+<!--pages/stats/stats.wxml-->
+<view class="container">
+  <view class="header">
+    <text>睡眠统计</text>
+  </view>
+
+  <view class="time-selector">
+    <button wx:for="{{timePeriods}}" wx:key="id"
+            class="period-btn {{selectedPeriod === item.id ? 'active' : ''}}"
+            bindtap="onPeriodChange" data-id="{{item.id}}">
+      {{item.name}}
+    </button>
+  </view>
+
+  <view class="stats-card">
+    <view class="stat-item">
+      <text class="label">平均睡眠</text>
+      <text class="value">{{avgSleep}}</text>
+      <text class="unit">小时</text>
+    </view>
+    <view class="stat-item">
+      <text class="label">平均质量</text>
+      <text class="value">{{avgQuality}}</text>
+      <text class="unit">分</text>
+    </view>
+  </view>
+
+  <view class="chart-area">
+    <text class="chart-title">睡眠趋势</text>
+    <view class="placeholder">图表展示区域</view>
+  </view>
+</view>

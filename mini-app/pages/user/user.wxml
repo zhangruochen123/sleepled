@@ -1,0 +1,27 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="header">
+    <text>我的</text>
+  </view>
+
+  <view class="user-info">
+    <image src="{{userAvatar}}" class="avatar"></image>
+    <view class="info">
+      <text class="name">{{userName}}</text>
+      <text class="uid">ID: {{userId}}</text>
+    </view>
+  </view>
+
+  <view class="menu-list">
+    <view class="menu-item" bindtap="onSettings">
+      <text class="menu-text">设置</text>
+      <text class="arrow">›</text>
+    </view>
+    <view class="menu-item" bindtap="onAbout">
+      <text class="menu-text">关于</text>
+      <text class="arrow">›</text>
+    </view>
+  </view>
+
+  <button class="logout-btn" bindtap="onLogout">退出登录</button>
+</view>

@@ -1,0 +1,43 @@
+<!--pages/record/record.wxml-->
+<view class="container">
+  <view class="header">
+    <text>记录睡眠</text>
+  </view>
+
+  <view class="form">
+    <view class="form-item">
+      <text class="label">入睡时间</text>
+      <picker mode="time" value="{{bedtime}}" bindchange="onBedtimeChange">
+        <view class="picker">{{bedtime}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">起床时间</text>
+      <picker mode="time" value="{{wakeup}}" bindchange="onWakeupChange">
+        <view class="picker">{{wakeup}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">睡眠质量</text>
+      <view class="quality-selector">
+        <button wx:for="{{qualities}}" wx:key="id" 
+                class="quality-btn {{selectedQuality === item.id ? 'active' : ''}}"
+                bindtap="onQualityChange" data-id="{{item.id}}">
+          {{item.name}}
+        </button>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <text class="label">备注</text>
+      <textarea placeholder="记录你的睡眠感受..." 
+                value="{{notes}}" 
+                bindchange="onNotesChange"
+                class="textarea" />
+    </view>
+  </view>
+
+  <button class="submit-btn" bindtap="onSubmit">保存记录</button>
+</view>

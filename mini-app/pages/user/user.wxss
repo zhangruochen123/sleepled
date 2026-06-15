@@ -1,0 +1,82 @@
+/**pages/user/user.wxss**/
+.container {
+  padding: 20rpx;
+}
+
+.header {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.user-info {
+  background: white;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 5rpx;
+}
+
+.uid {
+  font-size: 16rpx;
+  color: #999;
+}
+
+.menu-list {
+  background: white;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+
+.menu-item {
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-text {
+  font-size: 18rpx;
+  color: #333;
+}
+
+.arrow {
+  color: #999;
+  font-size: 20rpx;
+}
+
+.logout-btn {
+  width: 100%;
+  margin: 0;
+  background: #ff4444;
+}
+
+.logout-btn:active {
+  background: #cc0000;
+}

@@ -1,0 +1,19 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">睡了么</text>
+    <text class="subtitle">今晚睡得怎么样？</text>
+  </view>
+
+  <view class="card">
+    <view class="sleep-info">
+      <text class="label">昨晚睡眠</text>
+      <text class="value">{{lastNightSleep}}小时</text>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button bindtap="onRecordSleep">记录睡眠</button>
+    <button bindtap="onViewStats">查看统计</button>
+  </view>
+</view>
