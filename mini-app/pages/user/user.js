@@ -1,17 +1,36 @@
 // pages/user/user.js
+const app = getApp()
+
 Page({
   data: {
-    userAvatar: '',
-    userName: '用户名',
-    userId: '12345',
+    userInfo: {},
+    loading: true,
   },
 
   onLoad() {
     this.loadUserInfo()
   },
 
+  onShow() {
+    this.loadUserInfo()
+  },
+
   loadUserInfo() {
-    // TODO: 从后端获取用户信息
+    wx.cloud.callFunction({
+      name: 'getUserInfo',
+      data: {},
+      success: res => {
+        console.log('User info:', res.result)
+        this.setData({
+          userInfo: res.result.data,
+          loading: false,
+        })
+      },
+      fail: err => {
+        console.error('Failed to load user info:', err)
+        this.setData({ loading: false })
+      },
+    })
   },
 
   onSettings() {
@@ -22,9 +41,11 @@ Page({
   },
 
   onAbout() {
-    wx.showToast({
-      title: '关于功能开发中',
-      icon: 'none',
+    wx.showModal({
+      title: '关于睡了么',
+      content: '睡了么 v1.0.0\n帮助你追踪睡眠质量，建立健康作息',
+      confirmText: '知道了',
+      showCancel: false,
     })
   },
 
@@ -36,10 +57,16 @@ Page({
       cancelText: '取消',
       success: (res) => {
         if (res.confirm) {
-          // TODO: 清除登录信息
-          wx.navigateTo({
-            url: '/pages/index/index',
+          wx.clearStorageSync()
+          wx.showToast({
+            title: '已退出登录',
+            icon: 'success',
           })
+          setTimeout(() => {
+            wx.navigateTo({
+              url: '/pages/index/index',
+            })
+          }, 1500)
         }
       },
     })
