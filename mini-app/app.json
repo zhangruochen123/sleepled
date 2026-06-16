@@ -1,1 +1,49 @@
-{"pages":["pages/index/index","pages/record/record","pages/stats/stats","pages/user/user"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"睡了么","navigationBarTextStyle":"black"},"tabBar":{"color":"#999999","selectedColor":"#1296db","backgroundColor":"#ffffff","borderStyle":"black","list":[{"pagePath":"pages/index/index","text":"首页","iconPath":"images/home.png","selectedIconPath":"images/home-active.png"},{"pagePath":"pages/record/record","text":"记录","iconPath":"images/record.png","selectedIconPath":"images/record-active.png"},{"pagePath":"pages/stats/stats","text":"统计","iconPath":"images/stats.png","selectedIconPath":"images/stats-active.png"},{"pagePath":"pages/user/user","text":"我的","iconPath":"images/user.png","selectedIconPath":"images/user-active.png"}]},"style":"v2","sitemapLocation":"sitemap.json","cloud":true}
+{
+  "pages": [
+    "pages/index/index",
+    "pages/record/record",
+    "pages/stats/stats",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "睡了么",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "记录",
+        "iconPath": "images/record.png",
+        "selectedIconPath": "images/record-active.png"
+      },
+      {
+        "pagePath": "pages/stats/stats",
+        "text": "统计",
+        "iconPath": "images/stats.png",
+        "selectedIconPath": "images/stats-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "cloud": true
+}
