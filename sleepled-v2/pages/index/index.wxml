@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">
+    <text class="title">Sleep Tracker</text>
+    <text class="subtitle">Track your sleep quality</text>
+  </view>
+
+  <view class="card">
+    <view class="sleep-info">
+      <text class="label">Last Night Sleep</text>
+      <text class="value">{{lastNightSleep}}</text>
+      <text class="unit">hours</text>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button bindtap="onRecordSleep">Record Sleep</button>
+    <button bindtap="onViewStats">View Stats</button>
+  </view>
+</view>

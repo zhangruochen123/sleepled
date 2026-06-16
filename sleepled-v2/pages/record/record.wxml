@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <text>Record Sleep</text>
+  </view>
+
+  <view class="form">
+    <view class="form-item">
+      <text class="label">Sleep Time</text>
+      <picker mode="time" value="{{bedtime}}" bindchange="onBedtimeChange">
+        <view class="picker">{{bedtime}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">Wake Time</text>
+      <picker mode="time" value="{{wakeup}}" bindchange="onWakeupChange">
+        <view class="picker">{{wakeup}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">Quality</text>
+      <view class="quality-selector">
+        <button wx:for="{{qualities}}" wx:key="id" 
+                class="quality-btn {{selectedQuality === item.id ? 'active' : ''}}"
+                bindtap="onQualityChange" data-id="{{item.id}}">
+          {{item.name}}
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <button class="submit-btn" bindtap="onSubmit">Save</button>
+</view>

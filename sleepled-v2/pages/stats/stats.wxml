@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header">
+    <text>Sleep Stats</text>
+  </view>
+
+  <view class="time-selector">
+    <button wx:for="{{timePeriods}}" wx:key="id"
+            class="period-btn {{selectedPeriod === item.id ? 'active' : ''}}"
+            bindtap="onPeriodChange" data-id="{{item.id}}">
+      {{item.name}}
+    </button>
+  </view>
+
+  <view class="stats-card">
+    <view class="stat-item">
+      <text class="label">Avg Sleep</text>
+      <text class="value">{{avgSleep}}</text>
+      <text class="unit">hours</text>
+    </view>
+    <view class="stat-item">
+      <text class="label">Quality</text>
+      <text class="value">{{avgQuality}}</text>
+      <text class="unit">score</text>
+    </view>
+  </view>
+</view>
